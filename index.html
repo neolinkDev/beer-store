@@ -6,10 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BeerStore</title>
     <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"> -->
   </head>
   <body>
-    
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <!-- logo -->
+        <a href="/"><img src="./assets/images/logo-white.svg" alt="Logo" class="nav-logo"></a>
+
+        <!-- enlaces -->
+        <div class="nav-flex">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">home</a></li>
+          </ul>
+          <ul class="nav-links">
+            <li><a href="products.html" class="nav-link">cervezas</a></li>
+          </ul>
+          <ul class="nav-links">
+            <li><a href="about.html" class="nav-link">nosotros</a></li>
+          </ul>
+        </div>
+        
+        <!-- carrito de compras icono -->
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <ion-icon name="cart"></ion-icon>
+          </button>
+          <span class="cart-item-count">1</span>
+        </div>
+      </div>
+      
+      <button class="toggle-nav">
+        <ion-icon class="menu-outline" name="menu-outline"></ion-icon>
+      </button>
+    </nav>
+
+    <!-- hero image -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1 class="text-slanted">bebe, disfruta, marida</h1>
+        <!-- <h2 class="text-slanted"> Una cerveza equivale al platillo de un rey</h2> -->
+        <a href="products.html" class="hero-btn">Mostrar</a>
+      </div>
+    </section>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

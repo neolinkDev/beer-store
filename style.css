@@ -300,9 +300,9 @@ Navbar
   }
 }
 @media screen and (min-width: 992px) {
-  .nav-logo {
-    /* left: 50%; */
-  }
+  /* .nav-logo {
+    left: 50%;
+  } */
 }
 /* page navbar */
 .page .nav-link {
@@ -382,7 +382,7 @@ Sidebar
 .sidebar-overlay {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   display: grid;
@@ -391,6 +391,7 @@ Sidebar
   transition: var(--transition);
   opacity: 0;
   background: rgba(0, 0, 0, 0.5);
+  
 }
 .sidebar-overlay.show {
   opacity: 1;
@@ -402,10 +403,13 @@ Sidebar
   max-width: var(--fixed-width);
   background: var(--clr-white);
   border-radius: var(--radius);
+  /* border-top-right-radius: 0;
+  border-bottom-right-radius: 0; */
   box-shadow: var(--dark-shadow);
   position: relative;
   padding: 4rem;
   transform: scale(0);
+  border: 1px solid grey;
 }
 .show .sidebar {
   transform: scale(1);

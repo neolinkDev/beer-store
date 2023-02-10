@@ -495,7 +495,8 @@ Cart
   grid-template-rows: auto 1fr auto;
   transition: var(--transition);
   transform: translateX(100%);
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow-y: scroll;
 }
 .show .cart {
   transform: translateX(0);
@@ -781,11 +782,11 @@ Single Product Page
 ===============
 */
 .page-hero {
-  min-height: 20vh;
+  min-height: 15vh;
   display: grid;
   place-items: center;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-5);
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
 }
 .page-hero-title {
   font-weight: 500;

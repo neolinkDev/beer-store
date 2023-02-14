@@ -252,6 +252,7 @@ Hamburger Menu
   color: var(--clr-white);
   cursor: pointer;
   font-size: 2rem;
+  margin-right: 1rem;
 }
 
 .cart-outline {
@@ -262,7 +263,7 @@ Hamburger Menu
 .cart-item-count {
   position: absolute;
   top: -0.85rem;
-  right: -0.85rem;
+  right: .4rem;
   background: var(--clr-red-dark);
   width: 1.75rem;
   height: 1.75rem;

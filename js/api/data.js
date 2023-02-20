@@ -1,7 +1,10 @@
 
-
+/**
+ * 
+ * @returns {Promise<Product[]>}
+ */
 export const fetchProducts = async () => {
-  
+
   try {
 
     const baseUrl = import.meta.env.VITE_SUPABASE_URL;
@@ -20,6 +23,7 @@ export const fetchProducts = async () => {
 
     const data = await response.json();
 
+    // console.log(data)
     return data;
 
   } catch (error) {

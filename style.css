@@ -128,8 +128,10 @@ p {
 }
 
 .img {
-  width: 100%;
+  max-width: 30%;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .text-slanted {
   /* font-size: 1.5rem; */
@@ -724,7 +726,7 @@ product
 @media screen and (min-width: 1200px) {
   .featured-center {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
   .product .img {
     height: 13rem;

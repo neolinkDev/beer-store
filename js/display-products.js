@@ -1,5 +1,12 @@
+import { formatPrice } from './utils';
+
+/**
+ *
+ * @param {product[]} products
+ * @param {HTMLElement} elementHTML
+ */
 export const displayProducts = (products, elementHTML) => {
-  // console.log( products, elementHTML );
+  console.log(products, elementHTML);
 
   elementHTML.innerHTML = products
     .map((product) => {
@@ -8,13 +15,13 @@ export const displayProducts = (products, elementHTML) => {
       return `
         <article class="product">
           <div class="product-container">
-            <img src="${ image }" class="product-img img" alt="${ name }">
+            <img src="${image}" class="product-img img" alt="${name}">
             
             <div class="product-icons">
-              <a href="product.html?id=${ id }" class="product-icon">
+              <a href="product.html?id=${id}" class="product-icon" aria-label="ver detalles del producto">
                 <ion-icon name="search-sharp"></ion-icon>
-              </a>
-              <button class="product-cart-btn product-icon" data-id="${ id }">
+              </a> 
+              <button class="product-cart-btn product-icon" data-id="${id}" aria-label="agregar al carrito">
                 <ion-icon name="cart"></ion-icon>
               </button> 
             </div>
@@ -22,8 +29,8 @@ export const displayProducts = (products, elementHTML) => {
           </div>
           
           <footer>
-            <p class="product-name">${ name }</p>
-            <h4 class="product-price">$19.99</h4>
+            <p class="product-name">${name}</p>
+            <h4 class="product-price">${ formatPrice( price ) }</h4>
           </footer>
         </article>
       `;

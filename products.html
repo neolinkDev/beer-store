@@ -3,13 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Cervezas | BeerStore</title>
   <!-- font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Productos</h2>
+  <!-- navbar -->
+  <nav class="navbar page">
+    <div class="nav-center">
+      <!-- logo -->
+      <a href="/"><img src="./assets/images/logo.svg" alt="Logo" class="nav-logo"></a>
+
+      <!-- enlaces -->
+      <div class="nav-flex">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">inicio</a></li>
+        </ul>
+        <ul class="nav-links">
+          <li><a href="products.html" class="nav-link">cervezas</a></li>
+        </ul>
+        <ul class="nav-links">
+          <li><a href="about.html" class="nav-link">nosotros</a></li>
+        </ul>
+      </div>
+      
+      <!-- carrito de compras icono -->
+      <div class="toggle-container">
+        <button class="toggle-cart">
+          <ion-icon name="cart"></ion-icon>
+        </button>
+        <span class="cart-item-count">1</span>
+      </div>
+    </div>
+    
+    <!-- menú hamburguesa -->
+    <button class="toggle-nav">
+      <ion-icon class="menu-outline" name="menu-outline"></ion-icon>
+    </button>
+  </nav>
+
+  <!-- hero image -->
+  <section class="page-hero">
+    <div class="section-center">
+      <h3 class="page-hero-title">
+        Cervezas
+      </h3>
+    </div>
+  </section>
+
+  <!-- sidebar -->
+  <div class="sidebar-overlay">
+    <aside class="sidebar">
+
+      <!-- botón -->
+      <button class="sidebar-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <!-- enlaces -->
+      <ul class="sidebar-links">
+        <li>
+          <a href="index.html" class="sidebar-link">
+            <ion-icon class="icon" name="home-sharp"></ion-icon>
+            <span>inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="products.html" class="sidebar-link">
+            <ion-icon class="icon" name="beer-sharp"></ion-icon>
+            <span>cervezas</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="sidebar-link">
+            <ion-icon class="icon" name="people-sharp"></ion-icon>
+            <span>nosotros</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- shopping cart -->
+  <div class="cart-overlay">
+
+    <aside class="cart">
+
+      <!-- close button -->
+      <button class="cart-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <header>
+        <h3 class="">carrito de compras</h3>
+      </header>
+
+      <!-- cart items -->
+      <div class="cart-items">
+
+        <article class="cart-item" data-id="">
+          <img src="/assets/images/hero-image.jpg" class="cart-item-img" alt="name">
+
+          <!-- información del item -->
+          <div class="">
+            <h4 class="cart-item-name">bohemia pilsner</h4>
+            <p class="cart-item-price">$19.00</p>
+            <button class="cart-item-remove-btn">eliminar</button>
+          </div>
+
+          <!-- cantidad -->
+          <div class="">
+
+            <button class="cart-item-increase-btn">
+              <ion-icon name="caret-up-sharp"></ion-icon>
+            </button>
+            
+            <p class="cart-item-amount">1</p>
+
+            <button class="cart-item-decrease-btn">
+              <ion-icon name="caret-down-sharp"></ion-icon>
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- footer -->
+      <footer>
+        <h3 class="cart-total">
+          total: $79.00
+        </h3>
+        <button class="cart-checkout btn">finalizar compra</button>
+      </footer>
+    </aside>
+  </div>
+
+  <!-- cervezas -->
+  <section class="products">
+
+    <!-- filtrar -->
+    <div class="filters">
+
+    </div>
+
+    <!-- productos  -->
+    <div class="products-container"></div>
+  </section>
+
+  <!-- cargando pagina -->
+  <div class="loader page-loading">
+    <div class="scanner">
+      <span>Cargando...</span>
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="./js/pages"></script>
 </body>
 </html>

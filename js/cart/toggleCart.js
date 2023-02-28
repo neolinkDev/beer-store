@@ -20,7 +20,9 @@ $closeCartBtn.addEventListener('click', () => {
   bHidden.classList.remove('b-hidden');
 })
 
-//
+// 
 export const openCart = () => {
   $cartOverlay.classList.add('show');
+  bHidden.classList.add('b-hidden');
+  
 }

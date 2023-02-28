@@ -1,3 +1,4 @@
+import { addToCart } from './cart';
 import { formatPrice } from './utils';
 
 /**
@@ -6,7 +7,7 @@ import { formatPrice } from './utils';
  * @param {HTMLElement} elementHTML
  */
 export const displayProducts = (products, elementHTML) => {
-  console.log(products, elementHTML);
+  // console.log(products, elementHTML);
 
   elementHTML.innerHTML = products
     .map((product) => {
@@ -36,4 +37,16 @@ export const displayProducts = (products, elementHTML) => {
       `;
     })
     .join('');
+
+    // event
+    elementHTML.addEventListener('click', ({ target }) => {
+      
+      const $parent = target.closest('.product-cart-btn');
+      // console.log($parent)
+
+      if ($parent) {
+        addToCart($parent.dataset.id);
+        // openCart();
+      }
+    });
 };

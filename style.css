@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Rubik&display=swap');
 
 /*
 =============== 
@@ -135,9 +135,9 @@ p {
 }
 .text-slanted {
   /* font-size: 1.5rem; */
-  font-family: cursive;
-  font-weight: bold;
-  font-style: italic;
+  font-family: 'Rock Salt';
+  /* font-weight: bold;
+  font-style: italic; */
 }
 .section-center {
   width: 90vw;
@@ -342,12 +342,12 @@ Hero
   color: var(--clr-white);
 }
 .hero-container {
-  width: 90vw;
+  width: 77vw;
   max-width: var(--max-width);
 }
-.hero h1 {
+/* .hero h1 {
   font-weight: 700;
-}
+} */
 .hero h3 {
   text-transform: none;
   font-size: 1.5rem;
@@ -378,7 +378,7 @@ Hero
 
 @media screen and (min-width: 992px) {
   .hero h1 {
-    font-size: 4.25rem;
+    font-size: 4rem;
     letter-spacing: 5px;
   }
   .hero h3 {

@@ -11,7 +11,7 @@ export const displayProducts = (products, elementHTML) => {
 
   elementHTML.innerHTML = products
     .map((product) => {
-      const { id, name, company, image, price } = product;
+      const { id, name, company, style, image, price } = product;
 
       return `
         <article class="product">

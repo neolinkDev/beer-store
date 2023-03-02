@@ -772,6 +772,7 @@ Products Page
   border-radius: var(--radius);
   border-color: transparent;
   letter-spacing: var(--spacing);
+  outline-color: var(--clr-primary-5);
 }
 .search-input::placeholder {
   text-transform: capitalize;
@@ -826,13 +827,15 @@ Products Page
   }
 }
 .filter-error {
-  position: absolute;
-  top: 5rem;
-  left: 0;
+  /* position: absolute; */
+  /* top: 5rem;
+  left: 0; */
   width: 100%;
   text-align: center;
   margin-top: 4rem;
+  grid-column: 1 / 4;
 }
+
 /*
 =============== 
 Single Product Page

@@ -10,7 +10,7 @@ const setupStore = ( products ) => {
 
   store = products.map(( product ) => {
     
-    const { id, fields: { company, name, price, images: img, featured }} = product;
+    const { id, fields: { company, name, style, price, images: img, featured }} = product;
 
     const image = img[0].url
      
@@ -18,6 +18,7 @@ const setupStore = ( products ) => {
       id,
       company,
       name,
+      style,
       price,
       image,
       featured

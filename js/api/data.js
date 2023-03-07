@@ -10,7 +10,7 @@ export const fetchProducts = async () => {
     const baseUrl = import.meta.env.VITE_SUPABASE_URL;
     const endpoint = import.meta.env.VITE_ENDPOINT;
 
-    const response = await fetch(`${baseUrl}${endpoint}`, {
+    const response = await fetch(`${ baseUrl }${ endpoint }`, {
       headers: {
         apikey: import.meta.env.VITE_API_KEY,
         authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,

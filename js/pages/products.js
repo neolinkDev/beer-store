@@ -1,7 +1,7 @@
 
 
 import { displayProducts, store } from '../';
-import { septupSearch, setupCompanies } from '../filters';
+import { septupSearch, setupCompanies, setupPrice } from '../filters';
 import { getElement } from '../utils';
 
 // loader 
@@ -11,5 +11,6 @@ displayProducts( store, getElement('.products-container') );
 
 septupSearch( store );
 setupCompanies( store );
+setupPrice( store );
 
 loading.style.display = 'none';

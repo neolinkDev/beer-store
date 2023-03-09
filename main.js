@@ -15,7 +15,7 @@ const init = async () => {
     setupStore( products );
     
     //
-    const featured = store.filter((product) => product.featured === true);
+    const featured = store.filter((product) => product?.featured);
     // console.log( featured instanceof Array )
 
     //

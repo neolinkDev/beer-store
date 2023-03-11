@@ -15,12 +15,12 @@ export const setupPrice = (store) => {
 
   maxPrice = Math.max(...maxPrice);
 
-  priceInput.value = maxPrice;
+  priceInput.value = 0;
 
   // put the max price on the max property of input
   priceInput.max = maxPrice;
 
-  priceValue.textContent = `Precio: $${maxPrice}`;
+  priceValue.textContent = `Precio: $${0}`;
 
   let newStore;
 

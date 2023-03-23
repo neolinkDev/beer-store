@@ -26,7 +26,12 @@ $closeCartBtn.addEventListener('click', () => {
 
 // 
 export const openCart = () => {
+
+  if ($sidebarOverlay.classList.contains('show')) $sidebarOverlay.classList.remove('show');
+
   $cartOverlay.classList.add('show');
   bHidden.classList.add('b-hidden');
+
+  
   
 }

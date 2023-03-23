@@ -28,7 +28,18 @@ const setupStore = ( products ) => {
   setStorageItem( 'store', store );
 };
 
+/**
+ * 
+ * @param {string} id 
+ * @returns 
+ */
+const findProduct = ( id ) => {
+  
+  // return the first item with the same id
+  let product = store.find( (product) => product.id.toString() === id );
+  // console.log(product)
+  return product;
 
-const findProduct = () => {};
+};
 
 export { store, setupStore, findProduct };

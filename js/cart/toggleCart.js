@@ -7,8 +7,6 @@ const $toggleCartBtn = getElement(".toggle-cart"),
 
 const bHidden = getElement('body');
 
-
-
 $toggleCartBtn.addEventListener("click", () => {
 
   if ($sidebarOverlay.classList.contains('show')) $sidebarOverlay.classList.remove('show');

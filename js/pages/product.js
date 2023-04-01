@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   if(dataBeer){
     // console.log(dataBeer)
     const { fields } = dataBeer;
-
+    console.log(fields)
     const { name, price, style, images: img, company } = fields;
     const imageSingle = img[0].url
     

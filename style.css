@@ -561,6 +561,13 @@ Cart
   object-fit: cover;
   border-radius: var(--radius);
 }
+.cart-item-img-cart {
+  width: 30px;
+  max-width: 100%;
+  height: auto;
+  margin-left: 21px;
+  margin-right: 23px;
+}
 .cart-item-name {
   margin-bottom: 0.15rem;
 }

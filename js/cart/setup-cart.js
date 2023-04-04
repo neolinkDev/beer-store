@@ -13,14 +13,17 @@ const $cartItemCount = getElement('.cart-item-count'),
 // 
 let cart = getStorageItem('cart');
 
-//
+/**
+ * 
+ * @param {string} id 
+ */
 export const addToCart = ( id ) => {
   
   let item = cart.find( cartItem => cartItem.id == id );
   
   // console.log(item)
   
-  if(!item){
+  if(!item){ 
 
     let product = findProduct( id );
      
@@ -41,7 +44,7 @@ export const addToCart = ( id ) => {
     // console.log( items )
 
     // show the element with the same id
-    const newAmount = items.find(item => item.dataset.id == id );
+    const newAmount = items.find( item => item.dataset.id == id );
     console.log(newAmount)
 
     // and update the amount
@@ -90,6 +93,15 @@ const displayCartItemsDOM = () => {
 }
 
 /**
+ * remove item from the cart
+ * @param {string} id 
+ */
+const removeItem = ( id ) => {
+  
+  cart = cart.filter( cartItem => cartItem.id != id )
+}
+
+/**
  * 
  * @param {string|number} id 
  * @returns {number}
@@ -112,7 +124,29 @@ const increaseAmount = ( id ) => {
 
 //
 const setupCartFunctionality = () => {
+  
+  $cartItems.addEventListener('click', ({ target }) => {
 
+    const element  = target;
+    const parent   = target.parentElement;
+    const id       = target.dataset.id;
+    const parentID = target.parentElement.dataset.id;
+
+    // button remove
+    if(element.classList.contains('cart-item-remove-btn')){
+      
+      removeItem( id );
+
+      // this remove the item from the DOM
+      parent.parentElement.remove();
+    }
+
+    displayCartItemCount();
+    displayCartTotal();
+    setStorageItem('cart', cart);
+
+
+  })
 }
 
 //

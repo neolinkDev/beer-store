@@ -26,7 +26,7 @@ export const septupSearch = (store) => {
         }
       });
 
-      displayProducts(filterStoreByStyle, getElement('.products-container'));
+      displayProducts(filterStoreByStyle, getElement('.products-container'), true);
 
       if (filterStoreByStyle.length < 1) {
 
@@ -38,7 +38,7 @@ export const septupSearch = (store) => {
       }
     } else {
 
-      displayProducts(store, getElement('.products-container'));
+      displayProducts(store, getElement('.products-container'), true);
     }
   });
 };

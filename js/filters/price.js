@@ -36,7 +36,7 @@ export const setupPrice = (store) => {
     // console.log(newStore);
 
     // display in DOM
-    displayProducts(newStore, getElement('.products-container'));
+    displayProducts(newStore, getElement('.products-container'), true);
 
     // Display an error message if no products meet the selected filter
     if (newStore.length < 1) {

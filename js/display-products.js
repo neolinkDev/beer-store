@@ -5,13 +5,14 @@ import { formatPrice } from './utils';
  *
  * @param {product[]} products
  * @param {HTMLElement} elementHTML
+ * @param {boolean} filters
  */
-export const displayProducts = (products, elementHTML) => {
+export const displayProducts = (products, elementHTML, filters) => {
   // console.log(products, elementHTML);
 
   elementHTML.innerHTML = products
     .map((product) => {
-      const { id, name, company, style, image, price } = product;
+      const { id, name, image, price } = product;
 
       return `
         <article class="product">
@@ -37,6 +38,9 @@ export const displayProducts = (products, elementHTML) => {
       `;
     })
     .join('');
+
+    // if filters are in use, we avoid calling the event again.
+    if(filters) return;
 
     // event
     elementHTML.addEventListener('click', ({ target }) => {

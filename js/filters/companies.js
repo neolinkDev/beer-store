@@ -50,7 +50,7 @@ const handleClickEvent = (store) => {
         newStore = store.filter((beer) => beer.company === target.textContent);
       }
 
-      displayProducts(newStore, getElement('.products-container'));
+      displayProducts(newStore, getElement('.products-container'), true);
     }
   };
 };

@@ -30,7 +30,6 @@ export const addToCart = ( id ) => {
     product = {...product, amount: 1};
     
     cart = [...cart, product];
-    // console.log(cart)
 
     // add to the DOM
     displayCartDOM( product );
@@ -121,6 +120,27 @@ const increaseAmount = ( id ) => {
   })
   return updateAmount;
 }
+/**
+ * 
+ * @param {string|number} id 
+ * @returns {number}
+ */
+const decreaseAmount = ( id ) => {
+
+  let updateAmount;
+  
+
+  cart = cart.map( cartItem => {
+    
+    if( cartItem.id == id ){
+      updateAmount = cartItem.amount - 1;
+      cartItem = { ...cartItem, amount: updateAmount };
+    }
+
+    return cartItem;
+  })
+  return updateAmount;
+}
 
 //
 const setupCartFunctionality = () => {
@@ -131,7 +151,7 @@ const setupCartFunctionality = () => {
     const parent   = target.parentElement;
     const id       = target.dataset.id;
     const parentID = target.parentElement.dataset.id;
-    // console.log(parent)
+    
 
     // button remove
     if(element.classList.contains('cart-item-remove-btn')){
@@ -142,11 +162,24 @@ const setupCartFunctionality = () => {
       parent.parentElement.remove();
     }
 
-    if(element.closest('.cart-item-increase-btn')){
+    if(parent.closest('.cart-item-increase-btn')){
       // console.log('click')
       // console.log('parentID')
       const newAmount = increaseAmount(parentID);
       parent.nextElementSibling.textContent = newAmount;
+
+    }
+    if(parent.closest('.cart-item-decrease-btn')){
+      // console.log('click')
+      // console.log(parentID)
+      const newAmount = decreaseAmount(parentID);
+      if(newAmount === 0){
+      
+        removeItem( parentID );
+        parent.parentElement.parentElement.remove();
+      }else{
+        parent.previousElementSibling.textContent = newAmount;
+      }
 
     }
 

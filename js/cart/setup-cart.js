@@ -131,6 +131,7 @@ const setupCartFunctionality = () => {
     const parent   = target.parentElement;
     const id       = target.dataset.id;
     const parentID = target.parentElement.dataset.id;
+    // console.log(parent)
 
     // button remove
     if(element.classList.contains('cart-item-remove-btn')){
@@ -139,6 +140,14 @@ const setupCartFunctionality = () => {
 
       // this remove the item from the DOM
       parent.parentElement.remove();
+    }
+
+    if(element.closest('.cart-item-increase-btn')){
+      // console.log('click')
+      // console.log('parentID')
+      const newAmount = increaseAmount(parentID);
+      parent.nextElementSibling.textContent = newAmount;
+
     }
 
     displayCartItemCount();

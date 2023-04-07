@@ -16,7 +16,7 @@ export const displayCartDOM = ( { id, name, price, image, amount } ) => {
       alt="${ name }"
     >
 
-    <div class="">
+    <div>
       <h4 class="cart-item-name">${ name }</h4>
       <p class="cart-item-price">${ formatPrice( price ) }</p>
       <button class="cart-item-remove-btn" data-id="${ id }">eliminar</button>

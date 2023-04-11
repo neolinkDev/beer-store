@@ -12,7 +12,7 @@ const $cartItemCount = getElement('.cart-item-count'),
 
 // 
 let cart = getStorageItem('cart');
-
+// console.log(cart)
 /**
  * 
  * @param {string} id 
@@ -57,6 +57,8 @@ export const addToCart = ( id ) => {
 
   // cart in localStorage
   setStorageItem( 'cart', cart );
+
+  toggleCheckoutButton()
 
   // console.log(id)
   openCart();
@@ -186,10 +188,26 @@ const setupCartFunctionality = () => {
     displayCartItemCount();
     displayCartTotal();
     setStorageItem('cart', cart);
-
+    toggleCheckoutButton();
 
   })
 }
+
+/**
+ * change cart checkout button text
+ */
+const toggleCheckoutButton = () => {
+  const $checkoutButton = getElement('.cart-checkout');
+
+  const cartIsEmpty = cart.length === 0;
+
+  $checkoutButton.textContent = cartIsEmpty ? 'carrito vacío' : 'finalizar compra';
+  $checkoutButton.disabled = cartIsEmpty;
+  $checkoutButton.style.opacity = cartIsEmpty ? 0.5 : 1;
+  $checkoutButton.style.cursor = cartIsEmpty ? 'not-allowed' : 'pointer';
+  // $checkoutButton.style.pointerEvents = cartIsEmpty ? 'none' : 'auto';
+}
+
 
 //
 const init = () => {
@@ -201,6 +219,8 @@ const init = () => {
 
   // add cart items to DOM
   displayCartItemsDOM();
+
+  toggleCheckoutButton()
 
   //
   setupCartFunctionality();

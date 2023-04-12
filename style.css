@@ -350,9 +350,7 @@ Hero
   width: 77vw;
   max-width: var(--max-width);
 }
-/* .hero h1 {
-  font-weight: 700;
-} */
+
 .hero h3 {
   text-transform: none;
   font-size: 1.5rem;
@@ -441,13 +439,6 @@ Sidebar
   top: 1rem;
   right: 1rem;
   cursor: pointer;
-}
-
-.sidebar-links {
-  /* display: flex;
-  flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
 }
 
 .sidebar-link {
@@ -896,13 +887,6 @@ Single Product Page
   margin: 0 auto;
 }
 
-.single-product-company {
-  /* font-size: 1.2rem;
-  color: var(--clr-grey-8);
-  text-transform: uppercase;
-  letter-spacing: var(--spacing);
-  margin-bottom: 1.25rem; */
-}
 .single-product-price {
   text-align: center;
   font-weight: bold;
